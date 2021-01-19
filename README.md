@@ -1,4 +1,4 @@
-# TV Series Generator
+# TES Character Generator
 
 ## Contents
 This is where all the documentation for the project will be:
