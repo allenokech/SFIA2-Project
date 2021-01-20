@@ -2,8 +2,8 @@ version: '3.8'
 services:
 
   frontend:
-    container_name: "frontend"
-    image: allenokech/frontend
+    container_name: frontend
+    image: allenokech/frontend:latest
     build: ./frontend
     ports:
     - target: 5000
@@ -11,26 +11,23 @@ services:
       protocol: tcp
     environment:
       DATABASE_URI: $(DATABASE_URI)
-  
   service2:
-    container_name: "service2"
-    image: allenokech/service2
+    container_name: service2
+    image: allenokech/service2:latest
     build: ./service2
     deploy:
-      replicas: 3
-  
+      replicas: 2
   service3:
-    container_name: "service3"
-    image: allenokech/service3
+    container_name: service3
+    image: allenokech/service3:latest
     build: ./service3
     deploy:
-      replicas: 3
-
+      replicas: 2
   service4:
-    container_name: "service4"
-    image: allenokech/service4
+    container_name: service4
+    image: allenokech/service4:latest
     build: ./service4
     deploy:
-      replicas: 3
+      replicas: 2
   
   

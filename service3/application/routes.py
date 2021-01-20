@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, Response
 import random
-from application import app, db
+from application import app
 
 @app.route('/player_class', methods=['GET'])
 def player_class():
