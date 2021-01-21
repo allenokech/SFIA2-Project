@@ -25,5 +25,3 @@ services:
     container_name: character-gen_service4
     image: allenokech/service4:latest
     build: ./service4
-  
-  
