@@ -12,7 +12,5 @@ def gen():
     new_build = Character(race = race_response.text, player_class = player_class_response.text, build = build_response.text)
     db.session.add(new_build)
     db.session.commit()
-
-    previous = Character.query.first()
     
-    return render_template('index.html', race=race_response.text, player_class=player_class_response.text, build=build_response.text, previous=previous)
+    return render_template('index.html', race=race_response.text, player_class=player_class_response.text, build=build_response.text)
