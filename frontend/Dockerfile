@@ -1,4 +1,4 @@
-FROM python:3.7
+FROM python:latest
 COPY . .
 RUN pip3 install -r requirements.txt
 EXPOSE 5000
