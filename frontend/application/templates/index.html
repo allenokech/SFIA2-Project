@@ -1,9 +1,22 @@
-<h1>TES Build Generator</h1>
-
-<h2>Refresh to generate a Skyrim Character Build</h2>
-
-<h2> Race: {{ race }} </h2>
-<h2> Class: {{ player_class }} </h2>
-<h2> Build: {{ build }} </h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TES Build Generator</title>
+    <style>
+        body {
+          background-color: LightSalmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to TES Character Generator</h1>
+    <h2>Refresh to generate a Skyrim Character Build</h2>
+    <h3>Race: {{ race }}</h3>
+    <h3>Class: {{ player_class }}</h3>
+    <h3>Build: {{ build }}</h3>
 <hr></hr>
-<h2> Your new character is a {{ race }} - {{ player_class }} </h2>
+<h2> Your new character is: {{ race }} - {{ player_class }} </h2>
+</body>
+</html>
