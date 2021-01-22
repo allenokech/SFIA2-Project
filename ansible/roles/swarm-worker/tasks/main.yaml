@@ -11,10 +11,3 @@
     advertise_addr: swarm-worker-1
     join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
     remote_addrs: [ "swarm-manager:2377" ] 
-
-- name: Join Swarm-Worker-2
-  docker_swarm:
-    state: join
-    advertise_addr: swarm-worker-2
-    join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-    remote_addrs: [ "swarm-manager:2377" ] 

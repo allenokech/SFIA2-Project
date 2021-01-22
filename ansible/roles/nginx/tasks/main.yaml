@@ -1,0 +1,9 @@
+- name: Install NGINX
+  apt:
+    name: nginx
+    state: latest
+    update_cache: true
+- name: Start NGINX
+  service:
+    name: nginx
+    state: reloaded

@@ -10,4 +10,5 @@
   become: true
   roles: 
     - docker
-    - swarm-workers
+    - swarm-worker
+    - nginx
