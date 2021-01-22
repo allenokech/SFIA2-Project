@@ -25,6 +25,5 @@ pipeline{
                 sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
             }
         }
-        
     }
 }
