@@ -1,0 +1,38 @@
+pipeline{
+    agent any
+    environment{
+        DATABASE_URI = credentials("DATABASE_URI")
+        rollback = 'false'
+    }
+    stages{
+        stage("Testing"){
+            steps{
+                script{
+                        sh "bash jenkins/test.sh"
+                    
+                }
+            }
+        }
+        stage("Build and Push"){
+            steps{
+                sh "docker rmi -f \$(docker images -qa) || true"
+                sh "docker-compose build && docker-compose push"
+                // install docker and docker-compose
+                // add jenkins to docker group
+                // sudo su - jenkins, docker login
+                // docker-compose build and push
+            }
+        }
+        stage("Config Management (ansible)"){
+            steps{
+                // write out playbook, inventory
+                // with roles
+                // ssh keys generated from jenkins machine for jenkins user (ssh-keygen)
+                // sudo su - jenkins, install ansible on this machine for jenkins
+                // jenkins runs playbook
+                sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
+            }
+        }
+        
+    }
+}

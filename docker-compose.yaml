@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  frontend:
+    container_name: character-gen_frontend
+    image: allenokech/frontend:latest
+    build: ./frontend
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+      
+  service2:
+    container_name: character-gen_service2
+    image: allenokech/service2:latest
+    build: ./service2
+
+  service3:
+    container_name: character-gen_service3
+    image: allenokech/service3:latest
+    build: ./service3
+
+  service4:
+    container_name: character-gen_service4
+    image: allenokech/service4:latest
+    build: ./service4
