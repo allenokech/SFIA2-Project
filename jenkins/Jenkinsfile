@@ -9,7 +9,6 @@ pipeline{
             steps{
                 script{
                         sh "bash jenkins/test.sh"
-                    
                 }
             }
         }
