@@ -1,0 +1,16 @@
+[managers]
+swarm-manager
+
+[workers]
+swarm-worker-1
+swarm-worker-2
+
+[managers:vars]
+ansible_user=allen_okech
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/ansible_id_rsa
+
+[workers:vars]
+ansible_user=allen_okech
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+ansible_ssh_private_key_file=~/.ssh/ansible_id_rsa
