@@ -6,18 +6,21 @@ pipeline{
     stages{
         stage("Testing"){
             steps{
-                // write tests for each service
-                // pytest on each service
+                script{
+                    if (env.rollback == 'false') {
+                        sh "bash jenkins/test.sh"
+                    }
+                }
             }
         }
         stage("Build and Push"){
             steps{
+                sh "docker rmi -f \$(docker images -qa) || true"
+                sh "docker-compose build && docker-compose push"
                 // install docker and docker-compose
                 // add jenkins to docker group
                 // sudo su - jenkins, docker login
                 // docker-compose build and push
-                sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build && docker-compose push"
             }
         }
         stage("Config Management (ansible)"){
