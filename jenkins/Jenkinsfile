@@ -5,23 +5,6 @@ pipeline{
         rollback = 'false'
     }
     stages{
-        stage("Testing"){
-            steps{
-                script{
-                        sh "bash jenkins/test.sh"
-                }
-            }
-        }
-        stage("Build and Push"){
-            steps{
-                sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build && docker-compose push"
-                // install docker and docker-compose
-                // add jenkins to docker group
-                // sudo su - jenkins, docker login
-                // docker-compose build and push
-            }
-        }
         stage("Config Management (ansible)"){
             steps{
                 // write out playbook, inventory
