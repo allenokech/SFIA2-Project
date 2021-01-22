@@ -8,9 +8,8 @@ pipeline{
         stage("Testing"){
             steps{
                 script{
-                    if (env.rollback == 'false') {
                         sh "bash jenkins/test.sh"
-                    }
+                    
                 }
             }
         }
