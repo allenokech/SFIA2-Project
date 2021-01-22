@@ -33,12 +33,6 @@ pipeline{
                 sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
             }
         }
-        stage("Deploy"){
-            steps{
-                // copy docker-compose.yaml over ssh (scp command)
-                // set env variables on swarm manager
-                // ssh into swarm manager to deploy the stack
-            }
-        }
+        
     }
 }
