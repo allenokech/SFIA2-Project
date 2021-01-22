@@ -1,7 +1,10 @@
 pipeline{
     agent any
     environment{
+        app_version = '1.0'
+        docker-hub-credentials = credentials('docker-hub-credentials')
         DATABASE_URI = credentials("DATABASE_URI")
+        rollback = 'false'
     }
     stages{
         stage("Testing"){
