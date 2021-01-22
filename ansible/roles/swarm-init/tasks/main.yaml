@@ -1,0 +1,12 @@
+- name: Adding Jenkins user
+    user:
+        name: jenkins
+        groups: docker
+        shell: /bin/bash
+        append: true
+    
+    - name: Init Docker Swarm
+      community.general.docker_swarm:
+        state: present
+      register: swarm_info
+  
