@@ -8,7 +8,7 @@ pipeline{
         stage("Build and Push"){
             steps{
                 sh "docker rmi -f \$(docker images -qa) || true"
-                sh "docker-compose build && docker-compose push"
+                sh "docker-compose build --parallel && docker-compose push"
                 // install docker and docker-compose
                 // add jenkins to docker group
                 // sudo su - jenkins, docker login
