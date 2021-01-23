@@ -17,6 +17,10 @@ services:
     container_name: character-gen_service2
     image: allenokech/service2:latest
     build: ./service2
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
     deploy: 
       replicas: 3
 
@@ -24,6 +28,10 @@ services:
     container_name: character-gen_service3
     image: allenokech/service3:latest
     build: ./service3
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
     deploy: 
       replicas: 3
 
@@ -31,5 +39,9 @@ services:
     container_name: character-gen_service4
     image: allenokech/service4:latest
     build: ./service4
+    ports:
+    - target: 5000
+      published: 80
+      protocol: tcp
     deploy: 
       replicas: 3
