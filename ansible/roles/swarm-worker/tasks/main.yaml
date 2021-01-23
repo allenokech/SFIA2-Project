@@ -6,7 +6,7 @@
         shell: /bin/bash
         append: true
         
-    - name: Join Swarm-Worker-1
+    - name: Join Swarm-Workers
       community.general.docker_swarm:
         state: join
         advertise_addr: "{{ inventory_hostname }}"

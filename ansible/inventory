@@ -3,6 +3,7 @@ swarm-manager
 
 [workers]
 swarm-worker-1
+swarm-worker-2
 
 [managers:vars]
 ansible_user=jenkins
