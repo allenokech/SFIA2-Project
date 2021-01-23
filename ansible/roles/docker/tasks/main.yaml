@@ -17,8 +17,7 @@
     url: https://download.docker.com/linux/ubuntu/gpg
     state: present
   tags: docker
-
-- name: Add Docker to Repository
+- name: Add Docker Packages to Repository
   apt_repository: 
     repo: deb |arch=amd64| https://download.docker.com/linux/ubuntu {{ ansible_lsb.codename|lower }} stable
   tags: docker
@@ -28,12 +27,10 @@
     name: docker-ce
     state: latest
     update_cache: true
-
 - name: Start Docker Service
   service:
     name: docker
     state: started
-
 - name: pip docker
   pip:
     executable: pip3
