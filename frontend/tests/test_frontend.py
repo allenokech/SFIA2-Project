@@ -32,6 +32,6 @@ class TestResponse(TestBase):
             g.post("http://character-gen_service2:5000/build", text = "Quiet killers, these types attack from the shadows against unsuspecting prey.")
             
             response = self.client.get(url_for('gen'))
-            self.assertIn(b"Nord", response.data)
-            self.assertNotIn(b"Assassin", response.data)
-            self.assertNotIn(b"Quiet killers, these types attack from the shadows against unsuspecting prey.", response.data)
+            self.assertNotIn(b"Nord", response.data)
+            self.assertIn(b"Assassin", response.data)
+            self.assertIn(b"Quiet killers, these types attack from the shadows against unsuspecting prey.", response.data)
