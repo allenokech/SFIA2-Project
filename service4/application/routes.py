@@ -6,22 +6,22 @@ from application import app
 def build():
     player_class = request.data.decode('utf-8')
 
-    if player_class == "Archer":
-        build = 'Peerless marksman who relies almost entirely on bows or cross bows to get the job done.'
-    elif player_class == "Dual-Wield":
-        build = 'Aggressive fighters who wield weapons in both hands.'
-    elif player_class == "Illusionist":
-        build = 'Mages who specialize in manipulating minds, altering perceptions of friend and foe alike.'
-    elif player_class == "Assassin":
-        build = 'Quiet killers, these types attack from the shadows against unsuspecting prey.'
-    elif player_class == "Alchemist":
-        build = 'Characters skilled in the crafting and use of powerful potions and deadly poisons.'
-    elif player_class == "Nightblade":
-        build = 'Mages who work from the shadows, using stealth to supplement their magical abilities.'
-    elif player_class == "Barbarian":
-        build = 'Brutish, aggressive fighters who prefer an overwhelming offense over a cautious defense.'
-    elif player_class == "Juggernaut":
-        build = 'Tough, resiliant characters covered head to toe in nigh impenetrable heavy armor.'
+    if player_class == "Duelist":
+        build = 'Agile fighters who prefer finesse over brute strength.'
+    elif player_class == "Spellsword":
+        build = 'Powerful melee combatants who augment their fighting skills with various spells.'
+    elif player_class == "Warlock":
+        build = 'Those who harness magical power through unconventional means such as, but not limited to blood magic or pacts with higher beings.'
+    elif player_class == "Rogue":
+        build = 'Scoundrels willing to employ dirty, underhanded, and often illicit tactics to get their way.'
+    elif player_class == "Entropist":
+        build = 'Mages who specialize in poison, decay, disease, and other damage over time spells as well as status ailments.'
+    elif player_class == "Battlemage":
+        build = 'Mages who thrive in the heat of battle, preferring deadly close range spells.'
+    elif player_class == "Blacksmith":
+        build = 'Characters immensely skilled in the art of creating and tempering steel.'
+    elif player_class == "Knight":
+        build = 'Honorable defenders willing to take the brunt of any attack in place of their allies.'
     
     else:
         build = "Build not compatible"

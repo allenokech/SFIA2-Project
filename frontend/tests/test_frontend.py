@@ -12,7 +12,7 @@ class TestBase(TestCase):
     
     def setUp(self):
         db.create_all()
-        db.session.add(Character(race = "Dark Elf", player_class = "Assassin", build = "Quiet killers, these types attack from the shadows against unsuspecting prey."))
+        db.session.add(Character(race = "Argonian", player_class = "Entropist", build = "Mages who specialize in poison, decay, disease, and other damage over time spells as well as status ailments."))
         db.session.commit()
     
     def tearDown(self):
@@ -27,11 +27,11 @@ class TestGenerator(TestBase):
 class TestResponse(TestBase):
     def test_index(self):
         with requests_mock.mock() as g:
-            g.get("http://character-gen_service2:5000/race", text = "Dark Elf")
-            g.get("http://character-gen_service3:5000/player_class", text = "Assassin")
-            g.post("http://character-gen_service4:5000/build", text = "Quiet killers, these types attack from the shadows against unsuspecting prey.")
+            g.get("http://character-gen_service2:5000/race", text = "Argonian")
+            g.get("http://character-gen_service3:5000/player_class", text = "Entropist")
+            g.post("http://character-gen_service4:5000/build", text = "Mages who specialize in poison, decay, disease, and other damage over time spells as well as status ailments.")
             
             response = self.client.get(url_for('gen'))
-            self.assertNotIn(b"Nord", response.data)
-            self.assertIn(b"Assassin", response.data)
-            self.assertIn(b"Quiet killers, these types attack from the shadows against unsuspecting prey.", response.data)
+            self.assertNotIn(b"Redguard", response.data)
+            self.assertIn(b"Entropist", response.data)
+            self.assertIn(b"Mages who specialize in poison, decay, disease, and other damage over time spells as well as status ailments.", response.data)
