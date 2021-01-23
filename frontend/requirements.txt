@@ -1,5 +1,6 @@
 flask
 requests
+requests-mock
 pytest
 pytest-cov
 pymysql
