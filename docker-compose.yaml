@@ -10,18 +10,26 @@ services:
       protocol: tcp
     environment:
       DATABASE_URI: ${DATABASE_URI}
+    deploy: 
+      replicas: 3
       
   service2:
     container_name: character-gen_service2
     image: allenokech/service2:latest
     build: ./service2
+    deploy: 
+      replicas: 3
 
   service3:
     container_name: character-gen_service3
     image: allenokech/service3:latest
     build: ./service3
+    deploy: 
+      replicas: 3
 
   service4:
     container_name: character-gen_service4
     image: allenokech/service4:latest
     build: ./service4
+    deploy: 
+      replicas: 3
