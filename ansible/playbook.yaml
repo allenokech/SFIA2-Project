@@ -1,3 +1,9 @@
+- name : Setup Nginx (Load Balancer)
+  become: true
+  hosts: nginx
+  roles:
+    - nginx
+    
 - name: Init Docker Swarm 
   hosts: managers
   become: true
