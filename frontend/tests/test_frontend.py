@@ -2,7 +2,7 @@ from unittest.mock import patch
 from flask import url_for
 from flask_testing import TestCase
 import requests_mock
-from application import app
+from application import app, db
 from application.models import Character
 
 class TestBase(TestCase):
