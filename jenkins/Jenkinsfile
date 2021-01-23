@@ -5,6 +5,13 @@ pipeline{
         rollback = 'false'
     }
     stages{
+        stage("Testing"){
+            steps{
+                        sh "bash jenkins/test.sh"
+                }
+            }
+        }
+    stages{
         stage("Build and Push"){
             steps{
                 sh "docker rmi -f \$(docker images -qa) || true"
