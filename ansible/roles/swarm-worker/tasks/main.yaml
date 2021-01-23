@@ -10,5 +10,5 @@
       community.general.docker_swarm:
         state: join
         advertise_addr: "{{ swarm-worker-1 }}"
-        join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-        remote_addrs: [ "swarm-manager" ]
+        join_token: "{{ hostvars['swarm-manager-1']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+        remote_addrs: [ "swarm-manager-1" ]

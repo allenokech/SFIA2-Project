@@ -1,5 +1,5 @@
 [managers]
-swarm-manager
+swarm-manager-1
 
 [workers]
 swarm-worker-1
