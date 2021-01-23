@@ -1,13 +1,14 @@
-- name: Adding Jenkins user
-  user:
-    name: jenkins
-    groups: docker
-    shell: /bin/bash
-    append: true
+---
+    - name: Adding Jenkins user
+      user:
+        name: jenkins
+        groups: docker
+        shell: /bin/bash
+        append: true
         
-- name: Join Swarm-Worker-1
-  docker_swarm:
-    state: join
-    advertise_addr: swarm-worker-1
-    join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-    remote_addrs: [ "swarm-manager:2377" ] 
+    - name: Join Swarm-Worker-1
+      community.general.docker_swarm:
+        state: join
+        advertise_addr: "{{ swarm-worker-1 }}"
+        join_token: "{{ hostvars['swarm-manager']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+        remote_addrs: [ "swarm-manager" ]
