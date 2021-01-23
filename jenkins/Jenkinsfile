@@ -9,7 +9,6 @@ pipeline{
             steps{
                 script{
                         sh "bash jenkins/test.sh"
-                    
                 }
             }
         }
@@ -23,7 +22,7 @@ pipeline{
                 // docker-compose build and push
             }
         }
-        stage("Config Management (ansible)"){
+        stage("Config Management (Ansible)"){
             steps{
                 // write out playbook, inventory
                 // with roles
@@ -33,6 +32,18 @@ pipeline{
                 sh "cd ansible && /home/jenkins/.local/bin/ansible-playbook -i inventory playbook.yaml"
             }
         }
-        
+        stage("Deploy"){
+            steps{
+                script{
+                    sh "bash jenkins/deploy.sh"
+                }
+            }
+        }
+    }
+    post{
+        always{
+            junit "**/junit.xml"
+            cobertura coberturaReportFile: '**/coverage.xml', failNoReports: false, failUnstable: false, onlyStable: false
+        }
     }
 }
