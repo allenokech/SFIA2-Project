@@ -61,7 +61,6 @@ All testing for this project was carried out with Pytest. Unit testing was used 
 
 
 ### Future Improvements
-Testing Branch
 
 ### Author
 ##### Tonny Allen Okech
