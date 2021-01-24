@@ -90,7 +90,7 @@ A risk assessment was created in order to monitor and plan for any potential ris
 
 ![OG-Risk](./documentation/Original-Risk-Assessment.png)
 
-As I grew further into the project, I imporoved and added to the original risk assessment. It occured to me that there were certain areas within the project, especially its infrastructure that could greatly affect its success. 
+As I grew further into the project, I added to the original risk assessment. It became obvious to me that there some potential, glaring risks within certain areas of the project that could greatly affect its success. See below for the additions made. 
 ##### Updated Risk Assessment
 
 ![Final-Risk](./documentation/Final-Risk-Assessment.png)
