@@ -50,3 +50,10 @@ For the project, I chose Trello as my main project tracking tool. This is where 
 A risk assessment was created in order to monitor and plan for any potential risks that could jeaopardize the project. This proactive approach to implement the risk assessment could prevent the majority of incidents that could possibly occur during the project and minimises the likelihood and impact of those incidents. Below is the original risk assessment created during the planning stages of the project:
 
 As I grew further into the project, I evolved the original risk assessment. It occured to me that there were certain areas within the project, especially its infrastructure that could greatly affect its success. 
+
+### Future Improvements
+- The current application only allows for users to add songs to a single individual playlist, an improved application could enable song additions to multiple playlists at once.
+- Reiterating what was stated during the database structure, in future an upgraded application could contain Artists, Albums, Genres and Record Labels. These added entities would enable for a much more detailed application with users being able to store more information within their playlists. Infact, with the new entities the future Music Playlist application could actually be converted into a Music Library.
+
+### Author
+##### Tonny Allen Okech
