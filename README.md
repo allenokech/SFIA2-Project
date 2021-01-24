@@ -59,6 +59,7 @@ The pipeline is highlighted here in its fully illustrated form. It includes ever
 
 
 #### Jenkins Build Stages
+Below is how the pipeline appears on the CI Server:
 
 ![jenkins-build-stages](./documentation/Jenkins-Build-Stages.png)
 
@@ -106,7 +107,9 @@ Below is the frontend page of the application that users are met. As you can see
 ![frontend](./documentation/Frontend.png)
 
 ### Future Improvements
-
+- Stats or attributes depending on race or class for each character could have enabled for a more interesting experience for the users generating their characters. 
+- The user interface is rather basic and could be greatly improved. As users must refresh the page externally, a button could be included to generate the characters instead.
+- The ability for users to create a name for their generated characters. 
 ### Author
 ##### Tonny Allen Okech
 
