@@ -88,8 +88,12 @@ For the project, I chose Trello as my main project tracking tool. This is where 
 A risk assessment was created in order to monitor and plan for any potential risks that could jeaopardize the project. This proactive approach to implement the risk assessment could prevent the majority of incidents that could possibly occur during the project and minimises the likelihood and impact of those incidents. Below is the original risk assessment created during the planning stages of the project:
 ##### Original Risk Assessment
 
+![OG-Risk](./documentation/Original-Risk-Assessment.png)
+
 As I grew further into the project, I imporoved and added to the original risk assessment. It occured to me that there were certain areas within the project, especially its infrastructure that could greatly affect its success. 
 ##### Updated Risk Assessment
+
+![Final-Risk](./documentation/Final-Risk-Assessment.png)
 
 ## Development
 ### Testing
