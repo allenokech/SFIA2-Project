@@ -29,6 +29,7 @@ To achieve the project's objective, I decided to create a Character Generator ba
   - Creates a character build and sends it to the frontend where it will be presented to the user.
 
 ### Architecture
+
 #### Database Structure
 For this project, I was required to utilise a database to persist some data in Service 1. I elected to create a simple non-relational database with one table. As shown below, a Character table was created with the attributes race, player class and build as they are all imperative to the application's main functionality. The database enabled for storing all builds generated within the application.
 
@@ -43,6 +44,7 @@ Correct provisioning of the Git Feature branch model was one of the most importa
 
 #### CI Pipeline
 
+
 ### Project Tracking
 For the project, I chose Trello as my main project tracking tool. This is where the project backlog is stored, highlighting each individual task broken down from the project epic.
 
@@ -54,10 +56,16 @@ As I grew further into the project, I imporoved and added to the original risk a
 ##### Updated Risk Assessment
 
 ### Testing
-All testing for this project was carried out with Pytest. 
+#### Unit Testing
+All testing for this project was carried out with Pytest. Unit testing was used to test each function within every route for every service. The tests were designed to verify whether the correct data is correctly inserted into the application whilst also checking if unexpected or incorrect values have been inserted. Furthermore, with the utilisation of Webhooks through Github, the unit tests were triggered automatically in Jenkins after each push to the project repository in Github. Upon completion of the tests built in Jenkins, a coverage report is also returned to the console with further information about the tests. See below for the unit tests for each service:
+
 
 ### Future Improvements
 
 
 ### Author
 ##### Tonny Allen Okech
+
+### Acknowledgements
+##### Harry Volker
+##### Nathan Forester
