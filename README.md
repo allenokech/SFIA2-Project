@@ -46,7 +46,9 @@ Breaking down the diagram: Service 1 sends a 'GET' request to Services 2 and 3 i
 #### VCS- Branch Modelling
 Correct provisioning of the Git Feature branch model was one of the most important aspects of this project. As it required a rolling update, it was imperative that I seperated the two different implementations of the application. This meant building the first version of the application on a 'Feature-1' branch and building another feature branch ('Feature-2') from it to create the second implementation. Meanwhile, every other new implementation such as the Jenkinsfile was created on new branches and finally merged into the 'Development' branch once tested and declared ready.
 
-#### CI Pipeline
+#### CD (Continous Deployment) Pipeline
+
+![cd-pipeline](./documentation/CI-Pipeline.png)
 
 
 ### Project Tracking
