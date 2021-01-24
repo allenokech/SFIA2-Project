@@ -2,7 +2,8 @@
 
 ## Contents
 This is where all the documentation for the project will be:
-[[Brief]](#Brief)
+- [Brief](#Brief)
+  - [Additional Requirements]
 
 ## Brief
 The brief provided for this project presented an objective to create a service-orientated architecture for an application and must be composed of at least 4 services that work together. Service 1, the frontend, is the core service- it will render the Jinja2 templates required to interact with the application. Furthermore, the service will also be responsible for communicating with the 3 backend services. Service 2 and 3 are both tasked with generating random "objects" and direct them to the (frontend service 1). Finally, Service 4 is responsible for combining Services 2 and 3's results to create an outcome of which will be sent to the frontend.  
