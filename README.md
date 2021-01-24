@@ -1,4 +1,4 @@
-# TES Character Generator
+# TES V: Character Generator
 
 ## Contents
 - [Brief](#Brief)
