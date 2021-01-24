@@ -30,5 +30,23 @@ To achieve the project's objective, I decided to create a Character Generator ba
 
 ### Architecture
 #### Database Structure
+For this project, I was required to utilise a database to persist some data in Service 1. I elected to create a simple non-relational database with one table. As shown below, a Character table was created with the attributes race, player class and build as they are all imperative to the application's main functionality. The database enabled for storing all builds generated within the application.
 
 #### Service Architecture
+In order for the application to work correctly, all four services were required to communicate accordingly. The diagram below showcases how the services interact with each other.
+
+
+Breaking down the diagram: Service 1 sends a 'GET' request to Services 2 and 3 in order to retrieve a randomly generated race and class, Services 2 and 3 adhere to this and return a data object at random, Service 1 then sends a 'POST' request to Service 4 with the generated race and class from the aformentioned Services. Service 4 then sends a 'POST' request to return the final build for the character.
+
+#### VCS- Branch Modelling
+Correct provisioning of the Git Feature branch model was one of the most important aspects of this project. As it required a rolling update, it was imperative that I seperated the two different implementations of the application. This meant building the first version of the application on a 'Feature-1' branch and building another feature branch ('Feature-2') from it to create the second implementation. Meanwhile, every other new implementation such as the Jenkinsfile was created on new branches and finally merged into the 'Development' branch once tested and declared ready.
+
+#### CI Pipeline
+
+### Project Tracking
+For the project, I chose Trello as my main project tracking tool. This is where the project backlog is stored, highlighting each individual task broken down from the project epic.
+
+### Risk Assessment
+A risk assessment was created in order to monitor and plan for any potential risks that could jeaopardize the project. This proactive approach to implement the risk assessment could prevent the majority of incidents that could possibly occur during the project and minimises the likelihood and impact of those incidents. Below is the original risk assessment created during the planning stages of the project:
+
+As I grew further into the project, I evolved the original risk assessment. It occured to me that there were certain areas within the project, especially its infrastructure that could greatly affect its success. 
