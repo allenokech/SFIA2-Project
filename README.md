@@ -20,7 +20,7 @@ In order to do this, the follwowing was required:
 ## My Approach
 To achieve the project's objective, I decided to create a Character Generator based on Bethesda's 'The Elder Scrolls V: Skyrim'.
 - Service 1:
-  - Provides the Jinja2 template to display the generation page.
+  - The Frontend of the application and provides the Jinja2 template to display the generation page.
 - Service 2:
   - Generates a random race.
 - Service 3:
