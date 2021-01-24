@@ -56,7 +56,7 @@ Correct provisioning of the Git Feature branch model was one of the most importa
 
 #### Jenkins Build Stages
 
-![jenkins-build-stages](./documentation/CI-Jenkins-Build-Stages.png)
+![jenkins-build-stages](./documentation/Jenkins-Build-Stages.png)
 
 
 ### Project Tracking
