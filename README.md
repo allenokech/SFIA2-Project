@@ -66,7 +66,8 @@ As I grew further into the project, I imporoved and added to the original risk a
 #### Unit Testing
 All testing for this project was carried out with Pytest. Unit testing was used to test each function within every route for every service. The tests were designed to verify whether the correct data is correctly inserted into the application whilst also checking if unexpected or incorrect values have been inserted. Furthermore, with the utilisation of Webhooks through Github, the unit tests were triggered automatically in Jenkins after each push to the project repository in Github. Upon completion of the tests built in Jenkins, a coverage report is also returned to the console with further information about the tests. See below for the unit tests for each service:
 ##### Frontend (Service 1)
-The frontend unit test is checking 
+The frontend unit test creates a database using the already configured application models and populates it with a character. The unit tests written then try to verify whether the data pertaining to the character's race, class and build match the character created in the database using pytest's assert command.
+
 ![frontend-test](./documentation/Frontend-Test.png)
 
 ##### Service 2
