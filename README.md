@@ -120,7 +120,7 @@ Using Jenkin's Cobertura plugin enabled for visual coverage reports created from
 ![test-graphs](./documentation/Test-Graphs.png)
 
 ### Frontend
-Below is the frontend page of the application that users are met. As you can see, the page has a title signifying what the application is (a Skyrim character generator) and prompts the user to refresh the page to generate a new character.
+Below is the frontend page of the application that users are met. As you can see, the page has a title signifying what the application is (a Skyrim character generator) and prompts the user to refresh the page to generate a new character. The race, class and build is displayed after each generation accordingly.
 
 ![frontend](./documentation/Frontend.png)
 
