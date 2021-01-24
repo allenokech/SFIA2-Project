@@ -56,10 +56,20 @@ An indispendible part of this project is undoubtedly the CI/CD pipeline. This pr
 ![cd-pipeline](./documentation/CI-Pipeline.png)
 
 The pipeline is highlighted here in its fully illustrated form. It includes every framework that is utilised in order to achieve full continous deployment in every stage. 
+##### Development
+
 This begins with the development of the application in Visual Studio Code, every change made during the development stage is then pushed up to the project repository in my chosen version control system, Github. This is where all of the application's files can be stored safely and can be managed accordingly. Whenever progress is made, reference to project tracking through Trello enables for the progress to be updated based on the tasks listed from the product backlog. Work on outstanding tasks can then be retrieved in order to complete them. 
+##### Automated Testing 
+
 The CI Server, Jenkins, then creates a new build triggered via a webhook from Github after every new commit. Jenkins is responsible for running automated tests in the first stage of the build, once the tests are completed, they are tabulated and returned to Visual Studio Code with their reports. 
+##### Build, Push and Configuration
+
 The next build stage is building the application's containers and pushing the application through Docker Compose. Furthermore, once the application has been built, it's then pushed to the project's artefact repository, Docker-Hub. 
-Next, Ansible automatically configures the environment for the application in order for it to run correctly. This includes intallation of all required dependencies. Once configured, with the use of the container orchestration tool, Docker Swarm, the application deploys multiple containers across numerous host machines. Of which in this project's case is a manager node and two worker nodes. Docker Stack is also prioritised during this stage as it's tasked with enabling rolling updates to the application. Achieving continous deployment. 
+Next, Ansible automatically configures the environment for the application in order for it to run correctly. This includes intallation of all required dependencies. 
+##### Deployment
+Once configured, with the use of the container orchestration tool, Docker Swarm, the application deploys multiple containers across numerous host machines. Of which in this project's case is a manager node and two worker nodes. Docker Stack is also prioritised during this stage as it's tasked with enabling rolling updates to the application. Achieving continous deployment. 
+##### Live Environment
+
 At this stage, users can now access the frontend of the application through reverse proxy with Nginx as previously mentioned.
 
 
