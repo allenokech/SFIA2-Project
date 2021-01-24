@@ -31,7 +31,7 @@ To achieve the project's objective, I decided to create a Character Generator ba
 ## Architecture
 
 #### Database Structure
-For this project, I was required to utilise a database to persist some data in Service 1. I elected to create a simple non-relational database with one table. As shown below, a Character table was created with the attributes race, player class and build as they are all imperative to the application's main functionality. The database enabled for storing all builds generated within the application.
+For this project, it was required to utilise a database to persist some data in Service 1. I elected to create a simple non-relational database with one table. As shown below, a Character table was created with the attributes race, player class and build as they are all imperative to the application's main functionality. The database enabled for storing all builds generated within the application.
 
 ![ed](./documentation/ED.png)
 
