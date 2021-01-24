@@ -41,7 +41,7 @@ In order for the application to work correctly, all four services were required 
 ![Service_Arch](./documentation/Sercive-Architecture.png)
 
 
-Breaking down the diagram: Service 1 sends a 'GET' request to Services 2 and 3 in order to retrieve a randomly generated race and class, Services 2 and 3 adhere to this and return a data object at random, Service 1 then sends a 'POST' request to Service 4 with the generated race and class from the aformentioned Services. Service 4 then sends a 'POST' request to return the final build for the character.
+Breaking down the architecture of the application's services: firstly, the Frontend (Service 1) sends a 'GET' request to Services 2 and 3 in order to retrieve a randomly generated race and class, next, Services 2 and 3 adhere to this by returning a data object each at random, the Frontend then sends a 'POST' request to Service 4 with the generated race and class from the aformentioned Services. Service 4 then sends a 'POST' request back to the Fronted to return the final build for the character. Additionaly, once Service 4 has returned the final results to the Frontend based on the previous services' outcomes, the Frontend then persists the new character build into the MySQL database. Finally, the user can now access the Frontend of the application through reverse proxy, made possible by Nginx.
 
 #### VCS- Branch Modelling
 Below is my feature branch model:
@@ -51,8 +51,12 @@ Below is my feature branch model:
 Correct provisioning of the Git Feature branch model was one of the most important aspects of this project. As it required a rolling update, it was imperative that I seperated the two different implementations of the application. This meant building the first version of the application on a 'Feature-1' branch and building another feature branch ('Feature-2') from it to create the second implementation. Meanwhile, every other new implementation such as the Jenkinsfile was created on new branches and finally merged into the 'Development' branch once tested and declared ready.
 
 #### CD (Continous Deployment) Pipeline
+An indispendible part of this project is undoubtedly the CI/CD pipeline. This project elected to prioritise continous deployment. Below is an illustration of the project's continous deployment pipeline:
 
 ![cd-pipeline](./documentation/CI-Pipeline.png)
+
+The pipeline is highlighted here in its fully illustrated form. It includes every framework that is utilised in order to achieve full continous deployment in every stage. This begins with the development of the application in Visual Studio Code, every change made during the development stage is then pushed up to the project repository in my chosen version control system, Github. This is where all of the application's files can be stored safely and can be managed accordingly. Whenever progress is made, reference to project tracking through Trello enables for the progress to be updated based on the tasks listed from the product backlog. Work on outstanding tasks can then be retrieved in order to complete them. The CI Server, Jenkins, then creates a new build triggered via a webhook from Github after every new commit. Jenkins is responsible for running automated tests in the first stage of the build, once the tests are completed, they are tabulated and returned to Visual Studio Code with their reports. The next build stage is building the application's containers and pushing the application through Docker Compose. Furthermore, once the application has been built, it's then pushed to the project's artefact repository, Docker-Hub. Next, Ansible automatically configures the environment for the application in order for it to run correctly. This includes intallation of all required dependencies. Once configured, with the use of the container orchestration tool, Docker Swarm, the application deploys multiple containers across numerous host machines. Of which in this project's case is a manager node and two worker nodes. Docker Stack is also prioritised during this stage as it's tasked with enabling rolling updates to the application. Achieving continous deployment. At this stage, users can now access the frontend of the application through reverse proxy with Nginx as previously mentioned.
+
 
 #### Jenkins Build Stages
 
