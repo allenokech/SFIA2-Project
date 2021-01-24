@@ -38,6 +38,8 @@ For this project, I was required to utilise a database to persist some data in S
 #### Service Architecture
 In order for the application to work correctly, all four services were required to communicate accordingly. The diagram below showcases how the services interact with each other.
 
+![Service_Arch](./documentation/Service-Architecture.png)
+
 
 Breaking down the diagram: Service 1 sends a 'GET' request to Services 2 and 3 in order to retrieve a randomly generated race and class, Services 2 and 3 adhere to this and return a data object at random, Service 1 then sends a 'POST' request to Service 4 with the generated race and class from the aformentioned Services. Service 4 then sends a 'POST' request to return the final build for the character.
 
