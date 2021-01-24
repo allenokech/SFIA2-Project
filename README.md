@@ -44,11 +44,19 @@ In order for the application to work correctly, all four services were required 
 Breaking down the diagram: Service 1 sends a 'GET' request to Services 2 and 3 in order to retrieve a randomly generated race and class, Services 2 and 3 adhere to this and return a data object at random, Service 1 then sends a 'POST' request to Service 4 with the generated race and class from the aformentioned Services. Service 4 then sends a 'POST' request to return the final build for the character.
 
 #### VCS- Branch Modelling
+Below is my feature branch model:
+
+![branches](./documentation/Branches.png)
+
 Correct provisioning of the Git Feature branch model was one of the most important aspects of this project. As it required a rolling update, it was imperative that I seperated the two different implementations of the application. This meant building the first version of the application on a 'Feature-1' branch and building another feature branch ('Feature-2') from it to create the second implementation. Meanwhile, every other new implementation such as the Jenkinsfile was created on new branches and finally merged into the 'Development' branch once tested and declared ready.
 
 #### CD (Continous Deployment) Pipeline
 
 ![cd-pipeline](./documentation/CI-Pipeline.png)
+
+#### Jenkins Build Stages
+
+![jenkins-build-stages](./documentation/CI-Jenkins-Build-Stages.png)
 
 
 ### Project Tracking
@@ -83,6 +91,10 @@ The frontend unit test creates a test database using the already configured appl
 ##### Service 4
 
 ![service4-test](./documentation/Service-4-Test.png)
+
+##### Test Analysis Diagrams
+
+![test-graphs](./documentation/Test-Graphs.png)
 
 ### Frontend
 Below is the frontend page of the application that users are met. As you can see, the page has a title signifying what the application is (a Skyrim character generator) and prompts the user to refresh the page to generate a new character.
