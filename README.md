@@ -128,6 +128,11 @@ Below is the frontend page of the application that users are met. As you can see
 
 ![frontend](./documentation/Frontend.png)
 
+## Appraisal
+### Known Issues
+- The code development was stalling the progress of the project at the beginning due to problems with MySQL. Athough despite this, I managed to swiftly complete the development of application, achieving full functionality once I overcame those problems. 
+- During the development of the continous deployment process, I often stumbled across nagging errors that took far too long to fix. However, sometimes this was due to my lack of patience in identifying my own mistakes in the process. In future I will ensure to take time to effectively evaluate any potential drawbacks.  
+
 ### Future Improvements
 - Stats or attributes depending on race or class for each character could have enabled for a more interesting experience for the users generating their characters. 
 - The user interface is rather basic and could be greatly improved. As users must refresh the page externally, a button could be included to generate the characters instead.
