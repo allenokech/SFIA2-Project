@@ -150,7 +150,7 @@ Below is the frontend page of the application that users are met. As you can see
 ### Future Improvements
 - Stats or attributes depending on race or class for each character could have enabled for a more interesting experience for the users generating their characters. 
 - The user interface is rather basic and could be greatly improved. As users must refresh the page externally, a button could be included to generate the characters instead.
-- The ability for users to create a name for their generated characters. 
+- The ability for users to create a name for their generated characters with the use of a form. 
 ### Author
 ##### Tonny Allen Okech
 
