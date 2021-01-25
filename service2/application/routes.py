@@ -4,5 +4,5 @@ from application import app
 
 @app.route('/race', methods=['GET'])
 def race():
-    race = ["Nord", "Imperial", "Breton", "Khajiit", "Dark Elf", "Wood Elf"]
+    race = ["Redguard", "High Elf", "Argonian", "Orismer", "Dark Elf", "Wood Elf"]
     return Response(str(random.choice(race)), mimetype='text/plain')

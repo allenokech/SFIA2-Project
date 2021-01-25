@@ -10,6 +10,6 @@ class TestBase(TestCase):
 class TestResponse(TestBase):
     def test_player_class(self):
         with patch("random.choice") as r:
-            r.return_value = "Illusionist"
+            r.return_value = "Spellsword"
             response = self.client.get(url_for('player_class'))
-            self.assertEqual(b'Illusionist', response.data)
+            self.assertEqual(b'Spellsword', response.data)
